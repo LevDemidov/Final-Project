@@ -19,5 +19,5 @@ main{
     width:130px;
     height:130px;
     margin:25px;
-    background: red;
+    background:linear-gradient(45deg, rgba(34,171,147,1) 40%, rgba(25,102,141,1) 100%);
 }
