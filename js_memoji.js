@@ -13,3 +13,9 @@ function clickEvent() {
         this.classList.add('close');
     }
 } 
+img = '🐞 🦀 🐟 🐊 🐓 🦃'.split(' ');
+function coupleArr(array1, array2){
+    universalArray = array1.concat(array2);
+    return universalArray;
+}
+coupleArr(img, img);
