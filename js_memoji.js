@@ -1,8 +1,20 @@
+function coupleArr(arr) {
+    return [].concat(arr, arr);
+  }
+  function shuffleArr (arr){
+      return arr.sort(()=>Math.random()-0.5)
+  }  
 (function init() {
+    const emoji = '🤓 😍 😂 😊 😆 😏'.split(' ');
+    const shuffleEmoji  = shuffleArr(coupleArr(emoji))
     const cards = Array.from(document.querySelectorAll('.card'))
+    fillCards(cards,shuffleEmoji)
     cards.forEach((card) => { card.addEventListener('click', clickEvent) })
 }())
 
+function fillCards(cards,emoji){
+    cards.forEach((card,index)=>{card.textContent=emoji[index]})
+}
 function clickEvent() {
     const opened = this.classList.contains('open')
     if (!opened) {
@@ -12,24 +24,4 @@ function clickEvent() {
         this.classList.remove('open');
         this.classList.add('close');
     }
-} 
-img = '🐞 🦀 🐟 🐊 🐓 🦃'.split(' ');
-function coupleArr(array1, array2){
-    universalArray = array1.concat(array2);
-    return universalArray;
 }
-img = coupleArr(img, img);
-function shuffle(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-      let j = Math.floor(Math.random() * (i + 1)); // случайный индекс от 0 до i
-  
-      // поменять элементы местами
-      // мы используем для этого синтаксис "деструктурирующее присваивание"
-      // подробнее о нём - в следующих главах
-      // то же самое можно записать как:
-      // let t = array[i]; array[i] = array[j]; array[j] = t
-      [array[i], array[j]] = [array[j], array[i]];
-    }
-    return img
-  }
-img = shuffle(img)
