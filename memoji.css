@@ -1,36 +1,67 @@
-width: 130px;
-height: 130px;
-background: linear-gradient(45deg, 22AB93, 19668D);
-box-sizing: border-box;
-border: 5px solid white;
-border-radius: 9px;
-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-text-align: center;
-user-select: none;
-/* определяет может ли пользователь выбрать текст */
+body {
+    background-color: #CFD0CF;
 }
+header {
+    font-family: Arial;
+    font-weight: bold;
+    color: #434344;
+    line-height: 47px;
+    font-size: 42px;
+    margin: 40px auto 40px auto;
+    display: flex;
+    justify-content: center;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 720px;
+    margin: auto;
+}
+.card {
+    font-size: 0;
+    margin: 25px;
+    width: 130px;
+    height: 130px;
+    background: linear-gradient(45deg, #22AB93, #19668D);
+    box-sizing: border-box;
+    border: 5px solid white;
+    border-radius: 9px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    user-select: none;
+    /* определяет может ли пользователь выбрать текст */
+}
+
 .open {
-animation: open-card 0.2s linear forwards;
+    animation: open-card 1s linear forwards;
 }
 .close {
-animation: close-card 0.2s linear;
+    animation: close-card 1s linear forwards;
 }
+
 @keyframes open-card {
-0% {
-    font-size: 0;
-    transform: rotateY(180deg);
-    background: linear-gradient(-45deg, #22AB93, #19668D);
-    background: linear-gradient(45deg, #22AB93, #19668D);
-}
-50% {
-    font-size: 0;
-@@ -72,7 +72,7 @@ main {
-    font-size: 0;
-}
-100% {
-    background: linear-gradient(-45deg, #22AB93, #19668D);
-    background: linear-gradient(45deg, #22AB93, #19668D);
-    font-size: 0;
-    transform: rotateY(180deg);
-}
-}
+    0% {
+        font-size: 0;
+        transform: rotateY(180deg);
+        background: linear-gradient(45deg, #22AB93, #19668D);
+    }
+    50% {
+        font-size: 75px;
+    }
+    100% {
+        background: white;
+    }
+} 
+@keyframes close-card {
+    0% {
+        font-size: 75px;
+        background: white;
+        transform: rotateY(180deg);
+    }
+    50% {
+        font-size: 0;
+    }
+    100% {
+        background: linear-gradient(45deg, #22AB93, #19668D);
+    }
+} 
