@@ -50,6 +50,7 @@ main {
     }
     100% {
         background: white;
+        font-size: 75px;
     }
 } 
 @keyframes close-card {
@@ -63,5 +64,6 @@ main {
     }
     100% {
         background: linear-gradient(45deg, #22AB93, #19668D);
+        font-size: 0;
     }
 } 
