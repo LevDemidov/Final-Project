@@ -74,13 +74,13 @@ main {
     }
     100% {
         font-size: 75px;
-        background: rgb(255, 179, 179);
+        background: rgb(255, 217, 0);
     }
    
 }
 @keyframes close-card {
     0% {
-        background: rgb(255, 179, 179);
+        background: rgb(255, 217, 0);
         font-size: 75px;
     }
     50% {
@@ -164,7 +164,7 @@ main {
     transform: translate(-50%, -50%);
 }
 .alert__content{
-    background-color: #fff;
+    background:linear-gradient(45deg, #F44336, rgb(255, 255, 255));
     text-align: center;
     border-radius: 25px;
     padding: 10%;
