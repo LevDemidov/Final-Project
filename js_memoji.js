@@ -64,7 +64,7 @@ const enumStatus = {
       this.cardsList = [];
       this.timerNode=timerNode;
       this.alertNode = alertNode;
-      this.timerOpts={seconds: 1,};
+      this.timerOpts={seconds: 60,};
      this.init();
     }
   

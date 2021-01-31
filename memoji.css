@@ -1,5 +1,5 @@
 body {
-    background-color: #CFD0CF;
+    background:linear-gradient(45deg, #F44336, rgb(1, 102, 255), #fff);
 }
 
 header {
@@ -25,7 +25,7 @@ main {
     margin: 25px;
     width: 130px;
     height: 130px;
-    background: linear-gradient(45deg, #22AB93, #19668D);
+    background: linear-gradient(45deg, #F44336, rgb(1, 102, 255), #fff);
     box-sizing: border-box;
     border: 5px solid white;
     border-radius: 9px;
@@ -64,7 +64,7 @@ main {
     0% {
         font-size: 0;
         transform: rotateY(180deg);
-        background: linear-gradient(45deg, #22AB93, #19668D);
+        background: linear-gradient(45deg, #F44336, rgb(1, 102, 255), #fff);
     }
     50% {
         font-size: 0;
@@ -74,13 +74,13 @@ main {
     }
     100% {
         font-size: 75px;
-        background: white;
+        background: rgb(255, 179, 179);
     }
    
 }
 @keyframes close-card {
     0% {
-        background: white;
+        background: rgb(255, 179, 179);
         font-size: 75px;
     }
     50% {
@@ -90,7 +90,7 @@ main {
         font-size: 0;
     }
     100% {
-        background: linear-gradient(45deg, #22AB93, #19668D);
+        background: linear-gradient(45deg, #F44336, rgb(1, 102, 255), #fff);
         font-size: 0;
         transform: rotateY(180deg);
     }
@@ -100,7 +100,7 @@ main {
         font-size: 0;
         transform: rotateY(180deg);
         -webkit-transform: rotateY(180deg);
-        background: linear-gradient(-45deg, #22AB93, #19668D);
+        background: linear-gradient(45deg, #F44336, rgb(1, 102, 255), #fff);
     }
     50% {
         font-size: 0;
@@ -120,7 +120,7 @@ main {
         font-size: 0;
         transform: rotateY(180deg);
         -webkit-transform: rotateY(180deg);
-        background: linear-gradient(-45deg, #22AB93, #19668D);
+        background: linear-gradient(45deg, #F44336, rgb(1, 102, 255), #fff);
     }
     50% {
         font-size: 0;
@@ -179,5 +179,5 @@ main {
     padding: 10px 30px;
     margin: 40px 0 30px;
     border-radius: 7px;
-    background: linear-gradient(to left, #22AB93, #19668D);
+    background: linear-gradient(45deg, #F44336, rgb(1, 102, 255), #fff);
 }
