@@ -7,21 +7,35 @@
 </head>
 
 <body>
-    <header>Memoji</header>
-    <main>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-    </main>
+        <header>Memoji</header>
+        <main class="cards">
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+        </main>
+        <div class="alert invisible">
+            <div class='alert_window'>
+                <div class="alert__content">
+                    <div class='alert__message lose invisible'>
+                        <span> Вы проиграли</span>
+                    </div>
+                    <div class='alert_message win invisible'>
+                        <span> Поздравляем с победой!</span>
+                    </div>
+                    <button class='alert__button'> Играть снова</button>
+                </div>
+            </div>
+        </div>
+        <div class='timer'></div>
     <script src="js_memoji.js"></script>
 </body>
 </html>

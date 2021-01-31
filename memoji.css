@@ -1,6 +1,7 @@
 body {
     background-color: #CFD0CF;
 }
+
 header {
     font-family: Arial;
     font-weight: bold;
@@ -11,12 +12,14 @@ header {
     display: flex;
     justify-content: center;
 }
+
 main {
     display: flex;
     flex-wrap: wrap;
     width: 720px;
     margin: auto;
 }
+
 .card {
     font-size: 0;
     margin: 25px;
@@ -33,10 +36,28 @@ main {
 }
 
 .open {
-    animation: open-card 1s linear forwards;
+    animation: open-card 0.2s linear forwards;
 }
 .close {
-    animation: close-card 1s linear forwards;
+    animation: close-card 0.2s linear;
+}
+.wrong {
+    border-color: #F44336;
+    background: #F44336 !important;
+    font-size: 75px;
+}
+
+.success {
+    border-color: #5AD66F;
+    background: #5AD66F !important;
+    font-size: 75px;
+}
+.open-wrong {
+    animation: open-wrong 0.2s linear forwards;
+}
+
+.open-success {
+    animation: open-success 0.2s linear forwards;
 }
 
 @keyframes open-card {
@@ -46,24 +67,117 @@ main {
         background: linear-gradient(45deg, #22AB93, #19668D);
     }
     50% {
+        font-size: 0;
+    }
+    51% {
         font-size: 75px;
     }
     100% {
-        background: white;
         font-size: 75px;
+        background: white;
     }
-} 
+   
+}
 @keyframes close-card {
     0% {
-        font-size: 75px;
         background: white;
-        transform: rotateY(180deg);
+        font-size: 75px;
     }
     50% {
+        font-size: 75px;
+    }
+    51% {
         font-size: 0;
     }
     100% {
         background: linear-gradient(45deg, #22AB93, #19668D);
         font-size: 0;
+        transform: rotateY(180deg);
     }
-} 
+}
+@keyframes open-wrong {
+    0% {
+        font-size: 0;
+        transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg);
+        background: linear-gradient(-45deg, #22AB93, #19668D);
+    }
+    50% {
+        font-size: 0;
+    }
+    51% {
+        font-size: 75px;
+    }
+    100% {
+        font-size: 75px;
+        border-color: #F44336;
+        background: #F44336;
+    }
+}
+
+@keyframes open-success {
+    0% {
+        font-size: 0;
+        transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg);
+        background: linear-gradient(-45deg, #22AB93, #19668D);
+    }
+    50% {
+        font-size: 0;
+    }
+    51% {
+        font-size: 75px;
+    }
+    100% {
+        font-size: 75px;
+        border-color: #5AD66F;
+        background: #5AD66F;
+    }
+}
+
+.timer{
+    font-family: Arial;
+    font-size: 32px;
+    line-height: 36px;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: bold;
+    color: #434344;
+}
+.invisible{
+    display: none !important;
+}
+.alert{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}
+.alert_window{
+    min-width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.alert__content{
+    background-color: #fff;
+    text-align: center;
+    border-radius: 25px;
+    padding: 10%;
+}
+.alert__message{
+    padding-top: 30px;
+    font-size: 48px;
+}
+.alert__button{
+    color:white;
+    font-size: 20px;
+    padding: 10px 30px;
+    margin: 40px 0 30px;
+    border-radius: 7px;
+    background: linear-gradient(to left, #22AB93, #19668D);
+}
